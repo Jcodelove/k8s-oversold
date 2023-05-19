@@ -14,4 +14,6 @@ kubectl create secret generic \
         --from-file=dac-key.pem
 
 CA_BUNDLE=$(cat dac-ca.pem | base64 | tr -d '\n')
-sed -i "s@\${CA_BUNDLE}@${CA_BUNDLE}@g" ../*/*.yaml
+# sed -i "s@\${CA_BUNDLE}@${CA_BUNDLE}@g" ../*/*.yaml
+# mac环境使用一下
+sed -i ".bak" "s@\${CA_BUNDLE}@${CA_BUNDLE}@g" ../*/*.yaml

@@ -29,7 +29,7 @@ docker tag k8s-oversold:1.1   xxxx/k8s-oversold:1.1
 docker push  xxxx/k8s-oversold:1.1
 kubectl create ns oversold  ###创建命名空间
 cd deploy/cfssl
-sh create.sh ###生成密钥
+sh create.sh ###生成密钥   ## 不同操作系统命令会有差异
 cd ../mutatingwebhook/
 kubectl apply -f . ###在k8s集群中部署
 ### 镜像替换
