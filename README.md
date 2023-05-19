@@ -20,6 +20,7 @@
 
 克隆本项目到本地，在本地使用docker 对代码进行容器构建。再到k8s集群进行部署
 
+提供一个构建好了的镜像 `registry.cn-hangzhou.aliyuncs.com/yl-public/k8s-oversold:1.1`
 ```bash
 cd k8s-oversold
 docker build -t k8s-oversold:1.1 . ###构建镜像
